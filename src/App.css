@@ -1,38 +1,241 @@
-.App {
+/* html{
+  background-color: greenyellow;
+  background-image: url('/public/images/source.gif');
+} */
+
+
+header{
+  margin-top: 40px;
+  text-align: center;
+  font: bold 20px;
+}
+
+h1{
+  text-align: center;
+  font-size: 70px;
+}
+
+.hello{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.generate_button{
+  border-radius: 0px;
+  border-top: yellow;
+  border-right: pink;
+  border-left-color: pink;
+  border-bottom-color: black;
+  height: 50px;
+  width: fit-content;
+  border-width: 5px;
+  background-color: aquamarine;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.records_button{
+  border-radius: 0px;
+  border-top: yellow;
+  border-right: pink;
+  border-left-color: pink;
+  border-bottom-color: black;
+  height: 50px;
+  width: fit-content;
+  border-width: 5px;
+  background-color: aquamarine;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.button{
+  border-radius: 20px;
+  height: 50px;
+  width: fit-content;
+  border-color: rgb(255, 94, 0);
+  border-width: 5px;
+  background-color: aquamarine;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-cat-btn{
+  display: flex;
+  align-items: center;
+}
+
+/* .hidden{
+  display: none !important;
+}
+
+#alert{
+  height: 70px;
+  border-radius: 12px;
+  border-width: 20px;
+  background-color: rgb(255, 163, 235);
+  width: 150px;
+  align-items:center;
+  border-color: black;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top:50%;
+  left:70%;
+  text-align: center;
+  padding: 40px;
+}
+
+#alert button{
+  align-items: center;
+  background-color: pink;
+  font-family: fantasy;
+  cursor: pointer;
+} */
+
+.arrow-btn{
+  background-color: pink;
+  align-items: center;
+  display: flexbox;
+}
+
+.gallery{
+  display: flex;
+  align-items: flex-start;
+  gap: 200px;
+  margin:auto;
+  justify-content: center;
+}
+
+
+.cat-image {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+
+.record-cat-image {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  margin: 10px;
+}
+/* 
+.gallery-column{
+  padding-top: 50px;
+} */
+
+.arrows{
+  display: flex;
+  justify-content: center;
+}
+
+h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.record-image-box {
+  width: 220px;         /* size of the image box */
+  height: 220px;        /* make both sides identical height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;     /* hides anything too big */
+  border-radius: 12px;
+  background-color: white;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dui-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  margin-left: 10%;
+  margin-top: 200px;
+  background-image: url('/public/images/dui-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* Adjust transparency (0-1) */
+  z-index: 0; /* Behind the content */
+  
+  /* Fade in animation */
+  animation: fadeIn 2s ease-in;
+}
+
+.innocent-background {
+  position: fixed;
+  left: 60%;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  margin-left: 10%;
+  margin-top: 200px;
+  background-image: url('/public/images/law.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* Adjust transparency (0-1) */
+  z-index: 0; /* Behind the content */
+  
+  /* Fade in animation */
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.gallery-column {
+  position: relative;
+  z-index: 1;
+}
+
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  padding-top: 50px;
+
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
